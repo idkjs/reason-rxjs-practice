@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "scripts": {
     "build": "bsb -make-world",
-    "start": "bsb -make-world -w",
-    "clean": "bsb -clean-world"
+    "watch": "bsb -make-world -w",
+    "start": "node build/Demo.js",
+    "clean": "bsb -clean-world",
+    "webpack": "webpack -w",
+    "webpack:production": "NODE_ENV=production webpack",
+    "server": "webpack-dev-server"
   },
   "keywords": [
     "BuckleScript"
@@ -12,6 +16,16 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "^7.0.2-dev.1"
+    "@babel/cli": "7.8.3",
+    "@babel/core": "7.8.3",
+    "@babel/preset-env": "7.8.3",
+    "babel-loader": "8.0.6",
+    "bs-platform": "^7.0.2-dev.1",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "dependencies": {
+    "rxjs": "6.5.4"
   }
 }

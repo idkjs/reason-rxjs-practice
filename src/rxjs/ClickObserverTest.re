@@ -1,4 +1,3 @@
-Js.log("Hello, BuckleScript and Reason!");
 open RxJs;
 let observable =
   Observable.make(observer => {
